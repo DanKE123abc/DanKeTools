@@ -5,7 +5,8 @@
 ///脚本功能：单例模式
 ///备注：直接继承就可以了。
 ///</summary>
-namespace DanKeTools{
+namespace DanKeTools
+{
 
 public class Singleton<T> where T:new(){
     private static T instance;

@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace DanKeTools.UI
-{
-
 ///<summary>
 ///脚本名称： UIBasePanel.cs
 ///修改时间：2022/12/6
 ///脚本功能：UI基类面板
 ///备注：
 ///</summary>
+
+namespace DanKeTools.UI
+{
 
 public class UIBasePanel : MonoBehaviour
 {

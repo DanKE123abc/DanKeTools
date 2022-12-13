@@ -7,7 +7,8 @@ using UnityEngine;
 ///备注：直接继承就可以了。
 ///</summary>
 
-namespace DanKeTools{
+namespace DanKeTools
+{
 
 public class MonoSingleton<T> : MonoBehaviour where T: MonoBehaviour{
     private static T instance;
