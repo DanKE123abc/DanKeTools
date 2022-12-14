@@ -6,8 +6,8 @@ using UnityEngine.Events;
 
 ///<summary>
 ///脚本名称： EventCenter.cs
-///修改时间：
-///脚本功能：
+///修改时间：2022/12/13
+///脚本功能：事件中心
 ///备注：
 ///</summary>
 namespace DanKeTools.Events

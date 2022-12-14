@@ -8,7 +8,7 @@ using UnityEngine;
 ///脚本功能：不销毁该Object
 ///备注：挂在物体上
 ///</summary>
-
+[AddComponentMenu("DanKeTools/Don't Destroy")]
 public class DontDestroyObject : MonoBehaviour
 {
     private void Awake()
