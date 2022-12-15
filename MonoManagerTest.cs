@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DanKeTools.MonoManger;
+using DanKeTools.Mono;
+
 
 ///<summary>
 ///脚本名称： MonoManagerTest.cs
