@@ -20,7 +20,7 @@ namespace DanKeTools.Net
     public class Requests
     {
 
-        public static string _UserAgent = "";
+        public static string _UserAgent = "DanKeRequests/1.0";
         
         /// <summary>
         /// 向指定URL发送GET方法的请求
