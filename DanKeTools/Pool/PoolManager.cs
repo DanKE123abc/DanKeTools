@@ -9,8 +9,8 @@ namespace DanKeTools.Pool
 
     ///<summary>
     ///脚本名称： PoolManager.cs
-    ///修改时间：
-    ///脚本功能：
+    ///修改时间：2022/12/19
+    ///脚本功能：缓存池管理器
     ///备注：
     ///</summary>
 
@@ -20,7 +20,12 @@ namespace DanKeTools.Pool
 
         private GameObject poolObj;
 
-        public GameObject GetObj(string name)
+        /// <summary>
+        /// 存入物体
+        /// </summary>
+        /// <param name="name">名称</param>
+        /// <returns></returns>
+        public GameObject GetObject(string name)
         {
             GameObject obj = null;
             if (poolDic.ContainsKey(name) && poolDic[name].poolList.Count > 0)
@@ -36,7 +41,12 @@ namespace DanKeTools.Pool
             return obj;
         }
 
-        public void PushObj(string name, GameObject obj)
+        /// <summary>
+        /// 取出物体
+        /// </summary>
+        /// <param name="name">名称</param>
+        /// <param name="obj"></param>
+        public void PushObject(string name, GameObject obj)
         {
             if (poolObj == null) poolObj = new GameObject("Pool");
 
@@ -50,11 +60,14 @@ namespace DanKeTools.Pool
             }
         }
 
-        // 清空缓存池的方法，主要用于场景切换
+        /// <summary>
+        /// 清空缓存池
+        /// </summary>
         public void Clear()
         {
             poolDic.Clear();
             poolObj = null;
+            Debug.Log("[缓存池] 缓存池被清空！");
         }
     }
 

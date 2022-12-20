@@ -6,8 +6,8 @@ namespace DanKeTools.Pool
 {
     ///<summary>
     ///脚本名称： PoolData.cs
-    ///修改时间：
-    ///脚本功能：
+    ///修改时间：2022/12/19
+    ///脚本功能：缓存池数据管理
     ///备注：
     ///</summary>
 

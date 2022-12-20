@@ -16,20 +16,20 @@ public class PoolTest : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject go = PoolManager.Instance().GetObj("Cube");
+            GameObject go = PoolManager.Instance().GetObject("Cube");
             StartCoroutine(Back(go));
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            GameObject go = PoolManager.Instance().GetObj("Sphere");
+            GameObject go = PoolManager.Instance().GetObject("Sphere");
             StartCoroutine(Back(go));
         }
     }
 
     IEnumerator Back(GameObject go)
     {
-        yield return new WaitForSeconds(1f);
-        PoolManager.Instance().PushObj(go.name, go);
+        yield return new WaitForSeconds(10f);
+        PoolManager.Instance().PushObject(go.name, go);
     }
 }
