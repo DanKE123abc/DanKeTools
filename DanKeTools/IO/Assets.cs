@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 
 
-namespace DanKeTools.Utils.LoadAssets
+namespace DanKeTools.IO
 {
     ///<summary>
     ///脚本名称： LoadAssets.cs
@@ -14,7 +14,7 @@ namespace DanKeTools.Utils.LoadAssets
     ///脚本功能：加载各种资源
     ///备注：
     ///</summary>
-    public static class LoadAssets
+    public static class Assets
     {
         #region 加载资源
 
