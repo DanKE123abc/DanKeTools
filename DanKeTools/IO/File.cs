@@ -8,7 +8,7 @@ namespace DanKeTools.IO
     
     ///<summary>
     ///脚本名称： File.cs
-    ///修改时间：
+    ///修改时间：2022/12/24
     ///脚本功能：
     ///备注：
     ///</summary>
