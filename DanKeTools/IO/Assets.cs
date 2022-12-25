@@ -9,15 +9,14 @@ using UnityEngine.U2D;
 namespace DanKeTools.IO
 {
     ///<summary>
-    ///脚本名称： LoadAssets.cs
+    ///脚本名称： Assets.cs
     ///修改时间：2022/12/24
     ///脚本功能：加载各种资源
     ///备注：
     ///</summary>
     public static class Assets
     {
-        #region 加载资源
-
+        
         /// <summary>
         /// 加载Sprite
         /// </summary>
@@ -118,8 +117,7 @@ namespace DanKeTools.IO
 
             return content.ToString();
         }
-
-        #endregion
+        
 
     }
 

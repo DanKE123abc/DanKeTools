@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
+
+namespace DanKeTools.Utils.Console
+{
+    
 ///<summary>
 ///脚本名称： Console.cs
 ///修改时间：2022/12/8
 ///脚本功能：改变控制台颜色和大小
 ///备注：
 ///</summary>
-
-namespace DanKeTools.Utils.Console
-{
 
 public class font
 {

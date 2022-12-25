@@ -14,7 +14,6 @@ namespace DanKeTools.Utils.ToJson
     ///</summary>
     public static class ToJson
     {
-        #region List，Dictionary 转字符串
 
         //需要转换什么类型，转换为什么格式自己重载就可以了
         //建议不要写成泛型的方式，为避免装箱拆箱。
@@ -59,8 +58,7 @@ namespace DanKeTools.Utils.ToJson
             content.Append("}");
             return content.ToString();
         }
-
-        #endregion
+        
     }
 
 }
