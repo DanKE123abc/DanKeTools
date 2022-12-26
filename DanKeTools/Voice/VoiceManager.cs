@@ -56,7 +56,7 @@ namespace DanKeTools.Voice
             }
 
             //异步加载背景音乐并且加载完成后播放
-            FileManager.Instance().LoadAsync<AudioClip>("Music/bk/" + name, (clip) =>
+            FileManager.Instance().LoadAsync<AudioClip>("Music/BK/" + name, (clip) =>
             {
                 bkMusic.clip = clip;
                 bkMusic.loop = true;
