@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DanKeTools.Mono;
 using DanKeTools.Net;
+using DanKeTools.Utils.StringEncryption;
 
 ///<summary>
 ///脚本名称： MonoManagerTest.cs
@@ -36,6 +37,8 @@ public class MonoManagerTest : MonoBehaviour
     {
         Test t = new Test();
         MonoManager.Instance().AddUpdateListener(t.Update);
+        Debug.Log(StringEncryption.Encrypt("改革春风吹满地","12345678"));
+        Debug.Log(StringEncryption.Decrypt("9PBlLfgHLzjYy0CWiEGw2xGhGzwKZ2gl","12345678"));
     }
 
 }
