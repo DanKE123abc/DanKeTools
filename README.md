@@ -2,7 +2,7 @@
 
 ![Language](https://img.shields.io/badge/Language-Csharp-C#)![LICENSE](https://img.shields.io/badge/LICENSE-Apache--2.0-yellow)![Author](https://img.shields.io/badge/Author-DanKe-blue) ![Unity](https://img.shields.io/badge/Unity-2021.3.0f1-red)
 
-DanKeTools是基于Unity的一个基础开发框架，包括了一些项目中的常用组件。
+DanKeTools是基于Unity的一个基础开发框架，包含了一些项目中的常用组件。
 
 #### [文档](https://github.com/DanKE123abc/DanKeTools/blob/main/DanKeTools/README.md)
 
