@@ -10,8 +10,6 @@ DanKeTools是基于Unity的一个基础开发框架，包含了一些项目中�
 
 Unity开发版本： 2021.3.0f1
 
-.Net API版本：4.x
-
 ### 模块简介
 
 Base —— 单例模式
