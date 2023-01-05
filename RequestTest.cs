@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DanKeTools.Net;
+using DanKeTools.Fsm;
 
 ///<summary>
 ///脚本名称： RequestTest.cs
@@ -12,9 +13,10 @@ using DanKeTools.Net;
 
 public class RequestTest : MonoBehaviour
 {
+    private Fsm<RequestTest> fsm;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Requests.Get("http://httpbin.org/get", ""));
+        fsm = new Fsm<RequestTest>(this);
     }
 }

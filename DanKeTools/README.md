@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v1.0.0
+当前版本：v1.1.0
 
 ## 命名空间
 
@@ -38,6 +38,12 @@ using DanKeTools.Net;
 
 ```c#
 using DanKeTools.Pool;
+```
+
+##### 有限状态机和状态基类
+
+```c#
+using DanKeTools.Fsm;
 ```
 
 ##### 场景加载

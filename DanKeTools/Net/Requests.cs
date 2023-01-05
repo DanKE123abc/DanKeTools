@@ -12,7 +12,7 @@ namespace DanKeTools.Net
 
     ///<summary>
     ///脚本名称： Requests.cs
-    ///修改时间：2022/12/15
+    ///修改时间：2023/1/5
     ///脚本功能：网络请求
     ///备注：
     ///</summary>
@@ -216,6 +216,33 @@ namespace DanKeTools.Net
                 
             }
             return result;
+        }
+        
+        /// <summary>
+        /// 下载文件
+        /// </summary>
+        /// <param name="url">文件地址</param>
+        /// <param name="path">目录</param>
+        /// <returns>下载完返回true</returns>
+        public static bool Download(string url, string path)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.UserAgent =  Requests._UserAgent;
+            //发送请求并获取相应回应数据
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream responseStream = response.GetResponseStream();
+            //创建本地文件写入流
+            Stream stream = new FileStream(path, FileMode.Create);
+            byte[] bArr = new byte[1024];
+            int size = responseStream.Read(bArr, 0, (int)bArr.Length);
+            while (size > 0)
+            {
+                stream.Write(bArr, 0, size);
+                size = responseStream.Read(bArr, 0, (int)bArr.Length);
+            }
+            stream.Close();
+            responseStream.Close();
+            return true;
         }
         
     }
