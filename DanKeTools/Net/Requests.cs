@@ -159,7 +159,7 @@ namespace DanKeTools.Net
             }
             catch (Exception ex)
             {
-                Debug.Log("发送GET请求出现异常：" + ex.Message);
+                Debug.Log("发送Post请求出现异常：" + ex.Message);
             }
             return result;
         }
@@ -211,7 +211,7 @@ namespace DanKeTools.Net
             }
             catch (Exception ex)
             {
-                Debug.Log("发送GET请求出现异常：" + ex.Message);
+                Debug.Log("发送Post请求出现异常：" + ex.Message);
                 
                 
             }
