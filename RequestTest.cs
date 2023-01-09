@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DanKeTools.Net;
 using DanKeTools.Fsm;
+using DanKeTools.Utils.StringEncryption;
 
 ///<summary>
 ///脚本名称： RequestTest.cs
@@ -13,10 +14,8 @@ using DanKeTools.Fsm;
 
 public class RequestTest : MonoBehaviour
 {
-    private Fsm<RequestTest> fsm;
     // Start is called before the first frame update
     void Start()
     {
-        fsm = new Fsm<RequestTest>(this);
     }
 }
