@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v1.1.3
+当前版本：v1.2.0
 
 ## 命名空间
 
@@ -62,6 +62,12 @@ using DanKeTools.UI;
 
 ```c#
 using DanKeTools.Voice;
+```
+
+##### 子线程管理器
+
+```c#
+using DanKeTools.Thread;
 ```
 
 ##### 控制台颜色与字体

@@ -13,7 +13,7 @@ namespace DanKeTools.UI
 	///<summary>
 	///脚本名称： UIManager.cs
 	///修改时间：2022/12/26
-	///脚本功能：
+	///脚本功能：UI层级管理器（需搭配预制UI使用）
 	///备注：
 	///</summary>
 
@@ -48,7 +48,14 @@ namespace DanKeTools.UI
 			obj = FileManager.Instance().Load<GameObject>("DanKeTools/UI/EventSystem");
 			GameObject.DontDestroyOnLoad(obj);
 		}
-
+	
+		/// <summary>
+		/// 显示面板
+		/// </summary>
+		/// <param name="panelName"></param>
+		/// <param name="layer"></param>
+		/// <param name="callback"></param>
+		/// <typeparam name="T"></typeparam>
 		public void ShowPanel<T>(string panelName, E_UI_Layer layer = E_UI_Layer.Top, UnityAction<T> callback = null)
 			where T : UIBasePanel
 		{
@@ -102,6 +109,10 @@ namespace DanKeTools.UI
 			});
 		}
 
+		/// <summary>
+		/// 隐藏面板
+		/// </summary>
+		/// <param name="panelName"></param>
 		public void HidePanel(string panelName)
 		{
 			if (panelDic.ContainsKey(panelName))

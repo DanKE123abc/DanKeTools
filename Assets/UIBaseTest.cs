@@ -23,12 +23,12 @@ public class UIBaseTest : UIBasePanel
         GetControl<Button>("B2").onClick.AddListener(() =>
         {
             Debug.Log("B2按下");
-            SceneManager.Instance().LoadScene("scene1",load);
+            SceneManager.Instance().LoadScene("scene1",Load);
         });
 
     }
 
-    void load()
+    void Load()
     {
         Debug.Log("加载成功");
     }

@@ -12,8 +12,8 @@ namespace DanKeTools.Mono
 {
     ///<summary>
     ///脚本名称： MonoManager.cs
-    ///修改时间：
-    ///脚本功能：
+    ///修改时间：2023/1/12
+    ///脚本功能：Mono事件管理器
     ///备注：
     ///</summary>
     public class MonoManager : Singleton<MonoManager>
@@ -54,12 +54,16 @@ namespace DanKeTools.Mono
         {
             return controller.StartCoroutine(methodName);
         }
-
+        /// <summary>
+        /// 开启协程
+        /// </summary>
         public Coroutine StartCoroutine(IEnumerator routine)
         {
             return controller.StartCoroutine(routine);
         }
-
+        /// <summary>
+        /// 开启协程
+        /// </summary>
         public Coroutine StartCoroutine(string methodName, [DefaultValue("null")] object value)
         {
             return controller.StartCoroutine(methodName, value);
@@ -72,12 +76,16 @@ namespace DanKeTools.Mono
         {
             controller.StopCoroutine(routine);
         }
-
+        /// <summary>
+        /// 停止协程
+        /// </summary>
         public void StopCoroutine(Coroutine routine)
         {
             controller.StopCoroutine(routine);
         }
-
+        /// <summary>
+        /// 停止协程
+        /// </summary>
         public void StopCoroutine(string methodName)
         {
             controller.StopCoroutine(methodName);

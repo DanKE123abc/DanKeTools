@@ -12,7 +12,7 @@ namespace DanKeTools.IO
     ///<summary>
     ///脚本名称： InputManager.cs
     ///修改时间：2022/12/24
-    ///脚本功能：
+    ///脚本功能：输入管理器
     ///备注：
     ///</summary>
 

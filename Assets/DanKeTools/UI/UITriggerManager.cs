@@ -13,7 +13,7 @@ namespace DanKeTools.UI
     ///<summary>
     ///脚本名称： UITriggerManager.cs
     ///修改时间：2022/12/26
-    ///脚本功能：
+    ///脚本功能：UI事件管理器
     ///备注：
     ///</summary>
 
@@ -46,7 +46,7 @@ namespace DanKeTools.UI
         public delegate void MyMehod(BaseEventData baseEventData); //方法     
 
         /// <summary>
-        /// 调用该函数即可添加各类方法
+        /// 添加事件监听
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="eventTriggerType"></param>
@@ -73,7 +73,7 @@ namespace DanKeTools.UI
         }
         
         /// <summary>
-        /// 调用该函数即可添加各类方法
+        /// 添加事件监听
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="eventTriggerType"></param>

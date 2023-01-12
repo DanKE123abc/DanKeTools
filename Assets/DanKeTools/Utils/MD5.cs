@@ -12,7 +12,7 @@ namespace DanKeTools.Utils.MD5
     ///<summary>
     ///脚本名称： MD5.cs
     ///修改时间：2022/12/26
-    ///脚本功能：
+    ///脚本功能：MD5
     ///备注：
     ///</summary>
 

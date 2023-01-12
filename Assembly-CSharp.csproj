@@ -69,6 +69,7 @@
      <Compile Include="Assets\DanKeTools\Base\MonoSingleton.cs" />
      <Compile Include="Assets\DanKeTools\UI\UIManager.cs" />
      <Compile Include="Assets\DanKeTools\IO\InputManager.cs" />
+     <Compile Include="Assets\DanKeTools\Thread\ThreadManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
