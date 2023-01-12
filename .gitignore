@@ -1,2 +1,15 @@
-TextMesh Pro/
+Assets/TextMesh Pro/
+.idea/
+.vscode/
+Logs/
+obj/
+Library/
+Temp/
+UserSettings/
+ProjectSettings/
 *.meta
+.idea/vcs.xml
+.vscode/settings.json
+.idea/.idea.DanKeTools/.idea/indexLayout.xml
+.idea/DanKeTools.iml
+.idea/modules.xml
