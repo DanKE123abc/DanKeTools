@@ -21,7 +21,7 @@ namespace DanKeTools.Pool
         private GameObject poolObj;
 
         /// <summary>
-        /// 存入物体
+        /// 取出物体
         /// </summary>
         /// <param name="name">名称</param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace DanKeTools.Pool
         }
 
         /// <summary>
-        /// 取出物体
+        /// 存入物体
         /// </summary>
         /// <param name="name">名称</param>
         /// <param name="obj"></param>
