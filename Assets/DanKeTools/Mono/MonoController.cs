@@ -13,7 +13,7 @@ namespace DanKeTools.Mono
     ///</summary>
     public class MonoController : MonoBehaviour
     {
-        private event UnityAction updateEvent;
+        private event UnityAction UpdateEvent;
 
         void Start()
         {
@@ -22,9 +22,9 @@ namespace DanKeTools.Mono
 
         void Update()
         {
-            if (updateEvent != null)
+            if (UpdateEvent != null)
             {
-                updateEvent();
+                UpdateEvent();
             }
         }
 
@@ -34,7 +34,7 @@ namespace DanKeTools.Mono
         /// <param name="function"></param>
         public void AddUpdateListener(UnityAction function)
         {
-            updateEvent += function;
+            UpdateEvent += function;
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace DanKeTools.Mono
         /// <param name="function"></param>
         public void RemoveUpdateListener(UnityAction function)
         {
-            updateEvent -= function;
+            UpdateEvent -= function;
         }
 
     }

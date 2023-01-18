@@ -27,7 +27,7 @@ namespace DanKeTools.Voice
 
         public VoiceManager()
         {
-            MonoManager.Instance().AddUpdateListener(Update);
+            MonoManager.instance.AddUpdateListener(Update);
         }
 
         private void Update()
@@ -56,7 +56,7 @@ namespace DanKeTools.Voice
             }
 
             //异步加载背景音乐并且加载完成后播放
-            FileManager.Instance().LoadAsync<AudioClip>("Music/BK/" + name, (clip) =>
+            FileManager.instance.LoadAsync<AudioClip>("Music/BK/" + name, (clip) =>
             {
                 bkMusic.clip = clip;
                 bkMusic.loop = true;
@@ -122,7 +122,7 @@ namespace DanKeTools.Voice
             }
 
             AudioSource source = soundObj.AddComponent<AudioSource>();
-            FileManager.Instance().LoadAsync<AudioClip>("Music/Sounds/" + name, (clip) =>
+            FileManager.instance.LoadAsync<AudioClip>("Music/Sounds/" + name, (clip) =>
             {
                 source.clip = clip;
                 source.loop = isLoop;

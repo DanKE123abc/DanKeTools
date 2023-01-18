@@ -37,7 +37,7 @@ namespace DanKeTools.Scene
         /// <param name="func"></param>
         public void LoadSceneAsyn(string name, UnityAction func = null)
         {
-            MonoManager.Instance().StartCoroutine(ReallyLoadSceneAsyn(name,func));
+            MonoManager.instance.StartCoroutine(ReallyLoadSceneAsyn(name,func));
             
         }
 
@@ -46,7 +46,7 @@ namespace DanKeTools.Scene
             AsyncOperation asyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(name);
             while (!asyncOperation.isDone)
             {
-                EventCenter.Instance().EventTrigger("SceneLoading",asyncOperation.progress);
+                EventCenter.instance.EventTrigger("SceneLoading",asyncOperation.progress);
                 yield return asyncOperation.progress;
             }
             func();

@@ -24,7 +24,7 @@ namespace DanKeTools.Fsm
             this.target = target;
             preState = null;
             currentState = null;
-            MonoManager.Instance().AddUpdateListener(OnUpdate);
+            MonoManager.instance.AddUpdateListener(OnUpdate);
         }
 
         /// <summary>

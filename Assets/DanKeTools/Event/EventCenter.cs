@@ -19,21 +19,21 @@ namespace DanKeTools.Event
 
     public class EventInfo<T> : IEventInfo
     {
-        public UnityAction<T> actions;
+        public UnityAction<T> Actions;
 
         public EventInfo(UnityAction<T> action)
         {
-            actions += action;
+            Actions += action;
         }
     }
 
     public class EventInfo : IEventInfo
     {
-        public UnityAction actions;
+        public UnityAction Actions;
 
         public EventInfo(UnityAction action)
         {
-            actions += action;
+            Actions += action;
         }
     }
 
@@ -51,7 +51,7 @@ namespace DanKeTools.Event
             //判断字典里有没有对应这个事件，有就执行，没有就加进去。
             if (eventDic.ContainsKey(name))
             {
-                (eventDic[name] as EventInfo).actions += action;
+                (eventDic[name] as EventInfo).Actions += action;
             }
             else
             {
@@ -63,7 +63,7 @@ namespace DanKeTools.Event
         {
             if (eventDic.ContainsKey(name))
             {
-                (eventDic[name] as EventInfo<T>).actions += action;
+                (eventDic[name] as EventInfo<T>).Actions += action;
             }
             else
             {
@@ -81,7 +81,7 @@ namespace DanKeTools.Event
             if (eventDic.ContainsKey(name))
             {
                 //移除这个委托
-                (eventDic[name] as EventInfo).actions -= action;
+                (eventDic[name] as EventInfo).Actions -= action;
             }
         }
 
@@ -90,7 +90,7 @@ namespace DanKeTools.Event
             if (eventDic.ContainsKey(name))
             {
                 //移除这个委托
-                (eventDic[name] as EventInfo<T>).actions -= action;
+                (eventDic[name] as EventInfo<T>).Actions -= action;
             }
         }
 
@@ -102,7 +102,7 @@ namespace DanKeTools.Event
         {
             if (eventDic.ContainsKey(name))
             {
-                (eventDic[name] as EventInfo).actions?.Invoke();
+                (eventDic[name] as EventInfo).Actions?.Invoke();
             }
 
         }
@@ -111,7 +111,7 @@ namespace DanKeTools.Event
         {
             if (eventDic.ContainsKey(name))
             {
-                (eventDic[name] as EventInfo<T>).actions?.Invoke(info);
+                (eventDic[name] as EventInfo<T>).Actions?.Invoke(info);
             }
         }
 

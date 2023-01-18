@@ -13,29 +13,29 @@ namespace DanKeTools.Pool
 
     public class PoolData
     {
-        public GameObject fatherObj; // 对象挂载的父节点
-        public List<GameObject> poolList;
+        public GameObject FatherObj; // 对象挂载的父节点
+        public List<GameObject> PoolList;
 
         public PoolData(GameObject obj, GameObject poolObj)
         {
-            fatherObj = new GameObject(obj.name);
-            fatherObj.transform.parent = poolObj.transform;
-            poolList = new List<GameObject>() { obj };
+            FatherObj = new GameObject(obj.name);
+            FatherObj.transform.parent = poolObj.transform;
+            PoolList = new List<GameObject>() { obj };
             PushObj(obj);
         }
 
         public void PushObj(GameObject obj)
         {
             obj.SetActive(false);
-            poolList.Add(obj);
-            obj.transform.parent = fatherObj.transform;
+            PoolList.Add(obj);
+            obj.transform.parent = FatherObj.transform;
         }
 
         public GameObject GetObj()
         {
             GameObject obj = null;
-            obj = poolList[0];
-            poolList.RemoveAt(0);
+            obj = PoolList[0];
+            PoolList.RemoveAt(0);
             obj.SetActive(true);
             obj.transform.parent = null;
 

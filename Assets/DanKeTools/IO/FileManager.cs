@@ -82,7 +82,7 @@ namespace DanKeTools.IO
         public void LoadAsync<T>(string name, UnityAction<T> callback) where T : Object
         {
             //开启异步加载的协程
-            MonoManager.Instance().StartCoroutine(ReallyLoadAsync<T>(name, callback));
+            MonoManager.instance.StartCoroutine(ReallyLoadAsync<T>(name, callback));
         }
         private IEnumerator ReallyLoadAsync<T>(string name, UnityAction<T> callback) where T : Object
         {
@@ -114,22 +114,22 @@ namespace DanKeTools.IO
         /// <summary>
         /// 加载指定路径图集中的指定名称图片
         /// </summary>
-        /// <param name="_atlasPath"></param>
-        /// <param name="_spriteName"></param>
+        /// <param name="atlasPath"></param>
+        /// <param name="spriteName"></param>
         /// <returns></returns>
-        public static Sprite LoadSprite(string _atlasPath, string _spriteName)
+        public static Sprite LoadSprite(string atlasPath, string spriteName)
         {
             Sprite tempSprite = null;
-            SpriteAtlas tempAtlas = GetSpriteAtlas(_atlasPath);
-            Debug.Log(_atlasPath + ".." + (tempAtlas == null));
-            if (tempAtlas != null) tempSprite = tempAtlas.GetSprite(_spriteName);
+            SpriteAtlas tempAtlas = GetSpriteAtlas(atlasPath);
+            Debug.Log(atlasPath + ".." + (tempAtlas == null));
+            if (tempAtlas != null) tempSprite = tempAtlas.GetSprite(spriteName);
             return tempSprite;
         }
         
         /// <summary>
         /// 已加载图集记录
         /// </summary>
-        private static Dictionary<string, SpriteAtlas> m_UISpriteAtlasDic = new Dictionary<string, SpriteAtlas>();
+        private static Dictionary<string, SpriteAtlas> _mUISpriteAtlasDic = new Dictionary<string, SpriteAtlas>();
         /// <summary>
         /// 获取一个图集
         /// </summary>
@@ -137,17 +137,17 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static SpriteAtlas GetSpriteAtlas(string atlasName)
         {
-            if (m_UISpriteAtlasDic.ContainsKey(atlasName))
+            if (_mUISpriteAtlasDic.ContainsKey(atlasName))
             {
-                if (m_UISpriteAtlasDic[atlasName] == null)
-                    m_UISpriteAtlasDic[atlasName] = Resources.Load<SpriteAtlas>(atlasName);
+                if (_mUISpriteAtlasDic[atlasName] == null)
+                    _mUISpriteAtlasDic[atlasName] = Resources.Load<SpriteAtlas>(atlasName);
             }
             else
             {
-                m_UISpriteAtlasDic.Add(atlasName, Resources.Load<SpriteAtlas>(atlasName));
+                _mUISpriteAtlasDic.Add(atlasName, Resources.Load<SpriteAtlas>(atlasName));
             }
 
-            return m_UISpriteAtlasDic[atlasName];
+            return _mUISpriteAtlasDic[atlasName];
         }
 
         /// <summary>
@@ -177,13 +177,13 @@ namespace DanKeTools.IO
         /// <returns></returns>
         public static string LoadXML(string path)
         {
-            XmlDocument Xdoc = new XmlDocument();
+            XmlDocument xdoc = new XmlDocument();
             Debug.Log("当前目录是：" + path); //Application.dataPath);
             //加载XML 文件
-            Xdoc.Load(path + ".xml");
+            xdoc.Load(path + ".xml");
 
             //获取跟节点
-            XmlElement root = Xdoc.DocumentElement;
+            XmlElement root = xdoc.DocumentElement;
             Debug.Log("根元素是：" + root.Name);
 
             // data : 下一个子节点的名称 

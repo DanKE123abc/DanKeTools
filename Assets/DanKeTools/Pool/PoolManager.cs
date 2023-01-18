@@ -16,7 +16,7 @@ namespace DanKeTools.Pool
 
     public class PoolManager : Singleton<PoolManager>
     {
-        public Dictionary<string, PoolData> poolDic = new Dictionary<string, PoolData>();
+        public Dictionary<string, PoolData> PoolDic = new Dictionary<string, PoolData>();
 
         private GameObject poolObj;
 
@@ -28,9 +28,9 @@ namespace DanKeTools.Pool
         public GameObject GetObject(string name)
         {
             GameObject obj = null;
-            if (poolDic.ContainsKey(name) && poolDic[name].poolList.Count > 0)
+            if (PoolDic.ContainsKey(name) && PoolDic[name].PoolList.Count > 0)
             {
-                obj = poolDic[name].GetObj();
+                obj = PoolDic[name].GetObj();
             }
             else
             {
@@ -50,13 +50,13 @@ namespace DanKeTools.Pool
         {
             if (poolObj == null) poolObj = new GameObject("Pool");
 
-            if (poolDic.ContainsKey(name))
+            if (PoolDic.ContainsKey(name))
             {
-                poolDic[name].PushObj(obj);
+                PoolDic[name].PushObj(obj);
             }
             else
             {
-                poolDic.Add(name, new PoolData(obj, poolObj));
+                PoolDic.Add(name, new PoolData(obj, poolObj));
             }
         }
 
@@ -65,7 +65,7 @@ namespace DanKeTools.Pool
         /// </summary>
         public void Clear()
         {
-            poolDic.Clear();
+            PoolDic.Clear();
             poolObj = null;
             Debug.Log("[缓存池] 缓存池被清空！");
         }

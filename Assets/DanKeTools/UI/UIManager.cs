@@ -28,7 +28,7 @@ namespace DanKeTools.UI
 
 	public class UIManager : Singleton<UIManager>
 	{
-		public Dictionary<string, UIBasePanel> panelDic = new Dictionary<string, UIBasePanel>();
+		public Dictionary<string, UIBasePanel> PanelDic = new Dictionary<string, UIBasePanel>();
 
 		//这是几个UI面板
 		private Transform bot;
@@ -37,7 +37,7 @@ namespace DanKeTools.UI
 
 		public UIManager() //初始化面板
 		{
-			GameObject obj = FileManager.Instance().Load<GameObject>("DanKeTools/UI/Canvas");
+			GameObject obj = FileManager.instance.Load<GameObject>("DanKeTools/UI/Canvas");
 			Transform canvas = obj.transform;
 			GameObject.DontDestroyOnLoad(obj);
 
@@ -45,7 +45,7 @@ namespace DanKeTools.UI
 			mid = canvas.Find("Mid");
 			top = canvas.Find("Top");
 
-			obj = FileManager.Instance().Load<GameObject>("DanKeTools/UI/EventSystem");
+			obj = FileManager.instance.Load<GameObject>("DanKeTools/UI/EventSystem");
 			GameObject.DontDestroyOnLoad(obj);
 		}
 	
@@ -60,16 +60,16 @@ namespace DanKeTools.UI
 			where T : UIBasePanel
 		{
 			//已经显示了此面板
-			if (panelDic.ContainsKey(panelName))
+			if (PanelDic.ContainsKey(panelName))
 			{
 				//调用重写方法，具体内容自己添加
-				panelDic[panelName].ShowMe();
+				PanelDic[panelName].ShowMe();
 				if (callback != null)
-					callback(panelDic[panelName] as T);
+					callback(PanelDic[panelName] as T);
 				return;
 			}
 
-			FileManager.Instance().LoadAsync<GameObject>("DanKeTools/UI/" + panelName, (obj) =>
+			FileManager.instance.LoadAsync<GameObject>("DanKeTools/UI/" + panelName, (obj) =>
 			{
 				//把它作为Canvas的子对象
 				//并且设置它的相对位置
@@ -105,7 +105,7 @@ namespace DanKeTools.UI
 				}
 
 				//在字典中添加此面板
-				panelDic.Add(panelName, panel);
+				PanelDic.Add(panelName, panel);
 			});
 		}
 
@@ -115,12 +115,12 @@ namespace DanKeTools.UI
 		/// <param name="panelName"></param>
 		public void HidePanel(string panelName)
 		{
-			if (panelDic.ContainsKey(panelName))
+			if (PanelDic.ContainsKey(panelName))
 			{
 				//调用重写方法，具体内容自己添加
-				panelDic[panelName].HideMe();
-				GameObject.Destroy(panelDic[panelName].gameObject);
-				panelDic.Remove(panelName);
+				PanelDic[panelName].HideMe();
+				GameObject.Destroy(PanelDic[panelName].gameObject);
+				PanelDic.Remove(panelName);
 			}
 		}
 

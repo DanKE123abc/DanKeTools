@@ -37,8 +37,7 @@ namespace DanKeTools.UI
                 objName = controls[i].gameObject.name;
                 if (controlDic.ContainsKey(objName))
                 {
-                    controlDic[objName]
-                        .Add(controls[i]); //注意controlDic中存储的类型为<string, List<UIBehaviour>,所以我们的同一个UI的所有控件都在这个链表中
+                    controlDic[objName].Add(controls[i]);
                 }
                 else
                 {

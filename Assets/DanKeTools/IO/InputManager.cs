@@ -27,7 +27,7 @@ namespace DanKeTools.IO
 
         public InputManager()
         {
-            MonoManager.Instance().AddUpdateListener(Update);
+            MonoManager.instance.AddUpdateListener(Update);
         }
 
         private void Update()
@@ -113,12 +113,12 @@ namespace DanKeTools.IO
             if (Input.GetKeyDown(key))
             {
                 //事件中心模块，分发按下抬起事件（把哪个按键也发送出去）
-                EventCenter.Instance().EventTrigger("KeyisDown", key);
+                EventCenter.instance.EventTrigger("KeyisDown", key);
             }
 
             if (Input.GetKeyUp(key))
             {
-                EventCenter.Instance().EventTrigger("KeyisUp", key);
+                EventCenter.instance.EventTrigger("KeyisUp", key);
             }
         }
 
