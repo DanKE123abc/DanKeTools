@@ -44,6 +44,7 @@
      <Compile Include="Assets\DanKeTools\Utils\MD5.cs" />
      <Compile Include="Assets\DanKeTools\Pool\PoolData.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Base64.cs" />
+     <Compile Include="Assets\DanKeTools\Net\OnlineMT.cs" />
      <Compile Include="Assets\DanKeTools\Net\Requests.cs" />
      <Compile Include="Assets\DanKeTools\Mono\MonoManager.cs" />
      <Compile Include="Assets\DanKeTools\Fsm\Fsm.cs" />

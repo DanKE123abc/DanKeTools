@@ -28,7 +28,7 @@ using DanKeTools.IO;
 using DanKeTools.Mono;
 ```
 
-##### 网络请求
+##### 网络请求 / 在线机器翻译
 
 ```c#
 using DanKeTools.Net;

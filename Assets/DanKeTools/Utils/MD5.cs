@@ -18,6 +18,7 @@ namespace DanKeTools.Utils.MD5
 
     public class MD5
     {
+        
         /// <summary>
         /// 计算字符串MD5
         /// </summary>
