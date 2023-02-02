@@ -41,9 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DanKeTools\Base\DEncoding.cs" />
+     <Compile Include="Assets\DanKeTools\Utils\GPS.cs" />
      <Compile Include="Assets\DanKeTools\Utils\MD5.cs" />
      <Compile Include="Assets\DanKeTools\Pool\PoolData.cs" />
-     <Compile Include="Assets\DanKeTools\Utils\Base64.cs" />
      <Compile Include="Assets\DanKeTools\Net\OnlineMT.cs" />
      <Compile Include="Assets\DanKeTools\Net\Requests.cs" />
      <Compile Include="Assets\DanKeTools\Mono\MonoManager.cs" />
@@ -66,7 +67,6 @@
      <Compile Include="Assets\DanKeTools\UI\UITriggerManager.cs" />
      <Compile Include="Assets\DanKeTools\Base\MonoSingleton.cs" />
      <Compile Include="Assets\DanKeTools\Thread\ThreadDelegate.cs" />
-     <Compile Include="Assets\DanKeTools\UI\UIManager.cs" />
      <Compile Include="Assets\DanKeTools\IO\InputManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

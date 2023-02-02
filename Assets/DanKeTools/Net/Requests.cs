@@ -12,7 +12,7 @@ namespace DanKeTools.Net
 
     ///<summary>
     ///脚本名称： Requests.cs
-    ///修改时间：2023/1/5
+    ///修改时间：2023/2/2
     ///脚本功能：网络请求
     ///备注：
     ///</summary>
@@ -20,15 +20,14 @@ namespace DanKeTools.Net
     public class Requests
     {
 
-        public static string UserAgent = "DanKeToolsRequests/1.0";
-        
         /// <summary>
         /// 向指定URL发送GET方法的请求
         /// </summary>
         /// <param name="url">发送请求的URL</param>
         /// <param name="param">请求参数，请求参数应该是 name1=value1&name2=value2 的形式。</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Get(string url, string param)
+        public static string Get(string url, string param ,string UserAgent = "DanKeToolsRequests", string Method = "GET", string
+            Accept = "'*/*'")
         {
             string result = String.Empty;
             StreamReader reader = null;
@@ -36,10 +35,10 @@ namespace DanKeTools.Net
             {
                 string urlNameString = url + "?" + param;
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlNameString);
-                request.Method = "GET";
+                request.Method = Method;
                 request.ContentType = "text/html;charset=UTF-8";
-                request.Accept = "*/*";
-                request.UserAgent = Requests.UserAgent;
+                request.Accept = Accept;
+                request.UserAgent = UserAgent;
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream responseStream = response.GetResponseStream();
@@ -74,7 +73,8 @@ namespace DanKeTools.Net
         /// <param name="param">请求参数，请求参数应该是 name1=value1&name2=value2 的形式。</param>
         /// <param name="encoding">设置响应信息的编码格式，如utf-8</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Get(string url, string param, string encoding)
+        public static string Get(string url, string param, string encoding, string UserAgent = "DanKeToolsRequests", string Method = "GET", string
+            Accept = "'*/*'")
         {
             string result = String.Empty;
             StreamReader reader = null;
@@ -82,10 +82,10 @@ namespace DanKeTools.Net
             {
                 string urlNameString = url + "?" + param;
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlNameString);
-                request.Method = "GET";
+                request.Method = Method;
                 request.ContentType = "text/html;charset=" + encoding;
-                request.Accept = "*/*";
-                request.UserAgent =  Requests.UserAgent;
+                request.Accept = Accept;
+                request.UserAgent =  UserAgent;
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream responseStream = response.GetResponseStream();
@@ -119,20 +119,23 @@ namespace DanKeTools.Net
         /// <param name="url">发送请求的 URL</param>
         /// <param name="jsonData">请求参数，请求参数应该是Json格式字符串的形式。</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Post(string url, string jsonData)
+        public static string Post(string url, string jsonData,string UserAgent = "DanKeToolsRequests/1.0", string Method = "POST", string
+            Accept = "'*/*'", string ContentType = "application/x-www-form-urlencoded",CookieContainer cookie = null)
         {
             string result = String.Empty;
             try
             {
-                CookieContainer cookie = new CookieContainer();
-
+                if (cookie == null)
+                {
+                    cookie = new CookieContainer();
+                }
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                request.Method = "POST";
+                request.Method = Method;
                 request.Headers.Add("x-requested-with", "XMLHttpRequest");
                 request.ServicePoint.Expect100Continue = false;
-                request.ContentType = "application/x-www-form-urlencoded";
-                request.Accept = "*/*";
-                request.UserAgent =  Requests.UserAgent;
+                request.ContentType = ContentType;
+                request.Accept = Accept;
+                request.UserAgent =  UserAgent;
                 request.ContentLength = Encoding.UTF8.GetByteCount(jsonData);
                 request.CookieContainer = cookie;
                 using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
@@ -171,20 +174,23 @@ namespace DanKeTools.Net
         /// <param name="jsonData">请求参数，请求参数应该是Json格式字符串的形式。</param>
         /// <param name="encoding">设置响应信息的编码格式，如utf-8</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Post(string url, string jsonData, string encoding)
+        public static string Post(string url, string jsonData, string encoding,string UserAgent = "DanKeToolsRequests/1.0", string Method = "POST", string
+            Accept = "'*/*'", string ContentType = "application/x-www-form-urlencoded",CookieContainer cookie = null)
         {
             string result = String.Empty;
             try
             {
-                CookieContainer cookie = new CookieContainer();
-
+                if (cookie == null)
+                {
+                    cookie = new CookieContainer();
+                }
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                request.Method = "POST";
+                request.Method = Method;
                 request.Headers.Add("x-requested-with", "XMLHttpRequest");
                 request.ServicePoint.Expect100Continue = false;
-                request.ContentType = "application/x-www-form-urlencoded";
-                request.Accept = "*/*";
-                request.UserAgent =  Requests.UserAgent;
+                request.ContentType = ContentType;
+                request.Accept = Accept;
+                request.UserAgent =  UserAgent;
                 request.ContentLength = Encoding.UTF8.GetByteCount(jsonData);
                 request.CookieContainer = cookie;
                 using (StreamWriter writer = new StreamWriter(request.GetRequestStream(), Encoding.GetEncoding(encoding)))
@@ -224,10 +230,10 @@ namespace DanKeTools.Net
         /// <param name="url">文件地址</param>
         /// <param name="path">目录</param>
         /// <returns>下载完返回true</returns>
-        public static bool Download(string url, string path)
+        public static bool Download(string url, string path, string UserAgent = "DanKeToolsRequests/1.0")
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.UserAgent =  Requests.UserAgent;
+            request.UserAgent =  UserAgent;
             //发送请求并获取相应回应数据
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             Stream responseStream = response.GetResponseStream();

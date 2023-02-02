@@ -13,20 +13,6 @@ namespace DanKeTools
     {
         private static T _instance;
 
-        [Obsolete("此方法已被淘汰，请使用instance代替")]
-        public static T Instance()
-        {
-            if (_instance == null)
-            {
-                GameObject obj = new GameObject();
-                obj.name = typeof(T).ToString();
-                DontDestroyOnLoad(obj); //保证物体过场景不被销毁
-                _instance = obj.AddComponent<T>();
-            }
-
-            return _instance;
-        }
-        
         /// <summary>
         /// 单例模式需要实例化
         /// </summary>
