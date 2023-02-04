@@ -12,23 +12,23 @@ Unity开发版本： 2021.3.0f1
 
 ### 模块简介
 
-Base —— 单例模式
+Base —— 单例模式、数据转换类
 
 Editor —— 编辑器工具
 
 Event —— 事件中心模块
 
-IO —— 输入管理和文件管理模块
+IO —— 输入管理、文件管理模块
 
 Mono —— Mono管理器模块
 
-Net —— http模块和在线机器翻译
+Net —— http模块、在线机器翻译
 
 Pool —— 缓存池模块
 
 Scene —— 场景加载模块
 
-UI —— UI基础面板、UI管理器和UI事件管理器模块
+UI —— UI基础面板、UI事件管理器模块
 
 Voice —— 音效管理器模块
 
@@ -44,11 +44,19 @@ Thread —— 子线程管理器
 
 增加了网络在线机器翻译模块（利用Baidu翻译接口）
 
-修复了一些bug
+增加了常用类——数据转换类（DEncoding）
+
+Utils.Base64整合到DEncodeing中
+
+Request库函数优化
+
+删除UIManager
 
 重写单例模式
 
 重写子线程管理器
+
+淘汰了旧方法
 
 **v1.2.0**
 

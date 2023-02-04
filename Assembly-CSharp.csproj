@@ -41,10 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\DanKeTools\Base\DEncoding.cs" />
-     <Compile Include="Assets\DanKeTools\Utils\GPS.cs" />
      <Compile Include="Assets\DanKeTools\Utils\MD5.cs" />
      <Compile Include="Assets\DanKeTools\Pool\PoolData.cs" />
+     <Compile Include="Assets\DanKeTools\Base\DEncoding.cs" />
      <Compile Include="Assets\DanKeTools\Net\OnlineMT.cs" />
      <Compile Include="Assets\DanKeTools\Net\Requests.cs" />
      <Compile Include="Assets\DanKeTools\Mono\MonoManager.cs" />
@@ -55,6 +54,7 @@
      <Compile Include="Assets\DanKeTools\Voice\VoiceManager.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Components\AutoDestroyObject.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Console.cs" />
+     <Compile Include="Assets\DanKeTools\Utils\GPS.cs" />
      <Compile Include="Assets\DanKeTools\Pool\PoolManager.cs" />
      <Compile Include="Assets\DanKeTools\Scene\SceneManager.cs" />
      <Compile Include="Assets\DanKeTools\Fsm\FsmState.cs" />

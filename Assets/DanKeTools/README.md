@@ -1,14 +1,19 @@
 # DanKeTools
 
-当前版本：v1.2.0
+当前版本：v1.3.0
 
 ## 命名空间
 
-##### 单例模式
+##### 基础代码库
+
+- 单例模式
+- 数据转换公共类
 
 ```c#
 using DanKeTools;
 ```
+
+
 
 ##### 事件中心
 
@@ -16,11 +21,15 @@ using DanKeTools;
 using DanKeTools.Event;
 ```
 
+
+
 ##### 输入管理器 / 文件管理器
 
 ```c#
 using DanKeTools.IO;
 ```
+
+
 
 ##### Mono管理器
 
@@ -28,11 +37,15 @@ using DanKeTools.IO;
 using DanKeTools.Mono;
 ```
 
+
+
 ##### 网络请求 / 在线机器翻译
 
 ```c#
 using DanKeTools.Net;
 ```
+
+
 
 ##### 缓存池
 
@@ -40,11 +53,15 @@ using DanKeTools.Net;
 using DanKeTools.Pool;
 ```
 
+
+
 ##### 有限状态机和状态基类
 
 ```c#
 using DanKeTools.Fsm;
 ```
+
+
 
 ##### 场景加载
 
@@ -52,11 +69,15 @@ using DanKeTools.Fsm;
 using DanKeTools.Scene;
 ```
 
-##### UI管理器 / UI面板 / UI事件管理器
+
+
+##### UI面板 / UI事件管理器
 
 ```c#
 using DanKeTools.UI;
 ```
+
+
 
 ##### 音效管理器
 
@@ -64,39 +85,43 @@ using DanKeTools.UI;
 using DanKeTools.Voice;
 ```
 
+
+
 ##### 子线程管理器
 
 ```c#
 using DanKeTools.Thread;
 ```
 
-##### 控制台颜色与字体
+
+
+##### 常用工具库
 
 ```c#
 using DanKeTools.Utils.Console;
 ```
 
-##### 转Json
+- 转换Json
 
 ```c#
 using DanKeTools.Utils.ToJson;
 ```
 
-##### 字符串加解密
+- 字符串加解密
 
 ```c#
 using DanKeTools.Utils.StringEncryption;
 ```
 
-##### MD5操作
+- MD5操作
 
 ```c#
 using DanKeTools.Utils.MD5;
 ```
 
-##### Base64编解码
+- GPS工具
 
 ```c#
-using DanKeTools.Utils.Base64;
+using DanKeTools.Utils.GPS;
 ```
 
