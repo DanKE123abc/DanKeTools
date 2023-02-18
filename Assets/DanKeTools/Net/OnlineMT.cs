@@ -6,6 +6,7 @@ using System.Text;
 using DanKeTools.Utils.MD5;
 using Unity.VisualScripting;
 using UnityEngine;
+using DanKeTools.Json;
 using Random = System.Random;
 
 namespace DanKeTools.Net
@@ -17,16 +18,13 @@ namespace DanKeTools.Net
     ///脚本功能：利用百度api在线机器翻译
     ///备注：
     ///</summary>
-
-    [System.Serializable]
+    
     public class Trans_result
     {
         public string src;
 
         public string dst;
     }
-
-    [System.Serializable]
     public class Root
     {
         public string from;
@@ -117,7 +115,7 @@ namespace DanKeTools.Net
 
                     byte[] bytes = client.DownloadData(address);
                     string @string = Encoding.UTF8.GetString(bytes);
-                    var root = JsonUtility.FromJson<Root>(@string);
+                    var root = JsonMapper.ToObject<Root>(@string);
                     return root.trans_result[0].dst;
                 }
                 catch (Exception exception)
@@ -133,7 +131,7 @@ namespace DanKeTools.Net
 
                         byte[] bytes = client.DownloadData(address);
                         string @string = Encoding.UTF8.GetString(bytes);
-                        var root = JsonUtility.FromJson<Root>(@string);
+                        var root = JsonMapper.ToObject<Root>(@string);
                         return root.trans_result[0].dst;
                     }
                     catch (Exception e)

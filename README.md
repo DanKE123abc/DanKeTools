@@ -24,6 +24,8 @@ Mono —— Mono管理器模块
 
 Net —— http模块、在线机器翻译
 
+Json —— Json库
+
 Pool —— 缓存池模块
 
 Scene —— 场景加载模块
@@ -39,6 +41,10 @@ FSM —— 有限状态机
 Thread —— 子线程管理器
 
 ### 更新日志
+
+**v1.4.0**
+
+增加了Json处理库（基于LitJson）
 
 **v1.3.0**
 
@@ -87,3 +93,24 @@ FSM有限状态机
 **v1.0.0**
 
 版本1
+
+### 开源许可
+
+本项目MIT开源协议，由DanKe（github@DanKE123abc）领导开发。
+
+DanKeTools使用了以下开源库，向这些为开源奉献的作者致以敬意！
+
+```
+---------------------
+DanKeTools
+—— DanKE123abc
+MIT License
+https://github.com/DanKE123abc/DanKeTools
+---------------------
+litjson
+—— LitJSON
+litjson License
+https://github.com/LitJSON/litjson
+---------------------
+```
+

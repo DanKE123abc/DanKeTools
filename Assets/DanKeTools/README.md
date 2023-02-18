@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v1.3.0
+当前版本：v1.4.0
 
 ## 命名空间
 
@@ -75,6 +75,14 @@ using DanKeTools.Scene;
 
 ```c#
 using DanKeTools.UI;
+```
+
+
+
+##### Json库
+
+```c#
+using DanKeTools.Json;
 ```
 
 
