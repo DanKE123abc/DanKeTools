@@ -4,7 +4,7 @@
 
 DanKeTools是基于Unity的一个基础开发框架，包含了一些项目中的常用组件。
 
-#### [文档](https://github.com/DanKE123abc/DanKeTools/blob/main/DanKeTools/README.md)
+#### [文档](https://github.com/DanKE123abc/DanKeTools/blob/main/Assets/DanKeTools/README.md)
 
 ### 环境
 
