@@ -53,6 +53,7 @@
      <Compile Include="Assets\DanKeTools\Json\JsonReader.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Components\DontDestroyObject.cs" />
      <Compile Include="Assets\DanKeTools\Base\Singleton.cs" />
+     <Compile Include="Assets\DanKeTools\Debug\Debugger.cs" />
      <Compile Include="Assets\DanKeTools\Thread\ThreadManager.cs" />
      <Compile Include="Assets\DanKeTools\Json\JsonMockWrapper.cs" />
      <Compile Include="Assets\DanKeTools\Voice\VoiceManager.cs" />
@@ -80,7 +81,6 @@
      <Compile Include="Assets\DanKeTools\Base\MonoSingleton.cs" />
      <Compile Include="Assets\DanKeTools\Thread\ThreadDelegate.cs" />
      <Compile Include="Assets\DanKeTools\IO\InputManager.cs" />
-     <Compile Include="Assets\NewBehaviourScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

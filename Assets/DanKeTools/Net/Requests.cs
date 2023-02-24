@@ -12,7 +12,7 @@ namespace DanKeTools.Net
 
     ///<summary>
     ///脚本名称： Requests.cs
-    ///修改时间：2023/2/2
+    ///修改时间：2023/2/24
     ///脚本功能：网络请求
     ///备注：
     ///</summary>
@@ -26,7 +26,7 @@ namespace DanKeTools.Net
         /// <param name="url">发送请求的URL</param>
         /// <param name="param">请求参数，请求参数应该是 name1=value1&name2=value2 的形式。</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Get(string url, string param ,string UserAgent = "DanKeToolsRequests", string Method = "GET", string
+        public static string Get(string url, string param = "",string UserAgent = "DanKeToolsRequests", string Method = "GET", string
             Accept = "'*/*'")
         {
             string result = String.Empty;
@@ -73,7 +73,7 @@ namespace DanKeTools.Net
         /// <param name="param">请求参数，请求参数应该是 name1=value1&name2=value2 的形式。</param>
         /// <param name="encoding">设置响应信息的编码格式，如utf-8</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Get(string url, string param, string encoding, string UserAgent = "DanKeToolsRequests", string Method = "GET", string
+        public static string Get(string url, string param = "", string encoding = "", string UserAgent = "DanKeToolsRequests", string Method = "GET", string
             Accept = "'*/*'")
         {
             string result = String.Empty;
@@ -119,7 +119,7 @@ namespace DanKeTools.Net
         /// <param name="url">发送请求的 URL</param>
         /// <param name="jsonData">请求参数，请求参数应该是Json格式字符串的形式。</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Post(string url, string jsonData,string UserAgent = "DanKeToolsRequests/1.0", string Method = "POST", string
+        public static string Post(string url, string jsonData , string UserAgent = "DanKeToolsRequests", string Method = "POST", string
             Accept = "'*/*'", string ContentType = "application/x-www-form-urlencoded",CookieContainer cookie = null)
         {
             string result = String.Empty;
@@ -129,8 +129,7 @@ namespace DanKeTools.Net
                 {
                     cookie = new CookieContainer();
                 }
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                request.Method = Method;
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url); request.Method = Method;
                 request.Headers.Add("x-requested-with", "XMLHttpRequest");
                 request.ServicePoint.Expect100Continue = false;
                 request.ContentType = ContentType;
@@ -174,7 +173,7 @@ namespace DanKeTools.Net
         /// <param name="jsonData">请求参数，请求参数应该是Json格式字符串的形式。</param>
         /// <param name="encoding">设置响应信息的编码格式，如utf-8</param>
         /// <returns>所代表远程资源的响应结果</returns>
-        public static string Post(string url, string jsonData, string encoding,string UserAgent = "DanKeToolsRequests/1.0", string Method = "POST", string
+        public static string Post(string url, string jsonData, string encoding = "",string UserAgent = "DanKeToolsRequests", string Method = "POST", string
             Accept = "'*/*'", string ContentType = "application/x-www-form-urlencoded",CookieContainer cookie = null)
         {
             string result = String.Empty;

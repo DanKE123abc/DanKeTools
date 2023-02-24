@@ -162,7 +162,7 @@ namespace DanKeTools.Net
         /// <param name="original">原语言</param>
         /// <param name="target">目标语言</param>
         /// <returns></returns>
-        public static string MT_static(string text, Language original, Language target)
+        public static string QuickMT(string text, Language original, Language target)
         {
             var onlineMT = new OnlineMT();
             return onlineMT.MT(text, original, target);
@@ -174,7 +174,7 @@ namespace DanKeTools.Net
         /// <param name="text">文本</param>
         /// <param name="target">目标语言</param>
         /// <returns></returns>
-        public static string MT_static(string text, Language target)
+        public static string QuickMT(string text, Language target)
         {
             var onlineMT = new OnlineMT();
             return onlineMT.MT(text, Language.auto, target);
