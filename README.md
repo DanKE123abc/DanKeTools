@@ -1,5 +1,7 @@
 # DanKeTools
 
+### 小而美、可扩展、插件式、高内聚低耦合的游戏基础开发库
+
 ![Language](https://img.shields.io/badge/Language-Csharp-C#) ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow) ![Author](https://img.shields.io/badge/Author-DanKe-blue) ![Unity](https://img.shields.io/badge/Unity-2021.3.0f1-red)
 
 DanKeTools是基于Unity的一个基础开发框架，包含了一些项目中的常用组件。
@@ -24,7 +26,9 @@ Mono —— Mono管理器模块
 
 Net —— http模块、在线机器翻译
 
-Json —— Json库
+Json —— Json处理类
+
+Log —— 日志类
 
 Pool —— 缓存池模块
 
@@ -42,9 +46,11 @@ Thread —— 子线程管理器
 
 ### 更新日志
 
-**v1.4.0**
+**v2.0.0**
 
-增加了Json处理库（基于LitJson）
+增加了Json处理处理类（基于LitJson）
+
+增加Log类
 
 **v1.3.0**
 
@@ -114,3 +120,4 @@ https://github.com/LitJSON/litjson
 ---------------------
 ```
 
+部分代码受到网络上部分文章和代码片段的影响，感谢分享这些知识的人！

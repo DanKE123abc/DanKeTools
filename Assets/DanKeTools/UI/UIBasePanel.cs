@@ -22,13 +22,13 @@ namespace DanKeTools.UI
         private void Awake()
         {
             //控件并保存在字典中，可根据自己UI搭载的控件更改
-            FinChildControl<Button>();
-            FinChildControl<Image>();
-            FinChildControl<Scrollbar>();
-            FinChildControl<Text>();
+            FindChildControl<Button>();
+            FindChildControl<Image>();
+            FindChildControl<Scrollbar>();
+            FindChildControl<Text>();
         }
 
-        private void FinChildControl<T>() where T : UIBehaviour
+        private void FindChildControl<T>() where T : UIBehaviour
         {
             T[] controls = this.GetComponentsInChildren<T>(); //注意用的是GetComents,返回的是一组
             string objName; //使用名字对控件按物体分类

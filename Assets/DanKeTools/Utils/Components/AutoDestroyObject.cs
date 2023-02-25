@@ -9,7 +9,7 @@ using UnityEngine;
 ///脚本功能：自动销毁Object
 ///备注：挂在物体上
 ///</summary>
-[AddComponentMenu("DanKeTools/Auto Destroy")]
+[AddComponentMenu("DanKeTools/[Utils] Auto Destroy")]
 public class AutoDestroyObject : MonoBehaviour
 {
     // 自动销毁到计时

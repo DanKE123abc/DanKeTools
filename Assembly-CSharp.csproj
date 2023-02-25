@@ -53,10 +53,11 @@
      <Compile Include="Assets\DanKeTools\Json\JsonReader.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Components\DontDestroyObject.cs" />
      <Compile Include="Assets\DanKeTools\Base\Singleton.cs" />
-     <Compile Include="Assets\DanKeTools\Debug\Debugger.cs" />
+     <Compile Include="Assets\DanKeTools\Log\GameConsole.cs" />
      <Compile Include="Assets\DanKeTools\Thread\ThreadManager.cs" />
      <Compile Include="Assets\DanKeTools\Json\JsonMockWrapper.cs" />
      <Compile Include="Assets\DanKeTools\Voice\VoiceManager.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Components\AutoDestroyObject.cs" />
      <Compile Include="Assets\DanKeTools\Json\ParserToken.cs" />
      <Compile Include="Assets\DanKeTools\Json\JsonData.cs" />

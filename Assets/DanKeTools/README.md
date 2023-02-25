@@ -1,6 +1,6 @@
 # DanKeTools
 
-当前版本：v1.4.0
+当前版本：v2.0.0
 
 ## 命名空间
 
@@ -55,6 +55,14 @@ using DanKeTools.Pool;
 
 
 
+##### 日志类
+
+```c#
+using DanKeTools.Log;
+```
+
+
+
 ##### 有限状态机和状态基类
 
 ```c#
@@ -79,7 +87,7 @@ using DanKeTools.UI;
 
 
 
-##### Json库
+##### Json处理类
 
 ```c#
 using DanKeTools.Json;
