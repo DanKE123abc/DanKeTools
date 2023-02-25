@@ -4,7 +4,7 @@ using System.Reflection;
 using UnityEngine;
 
 
-namespace DanKeTools.Utils.Console
+namespace DanKeTools.Log
 {
     
 ///<summary>

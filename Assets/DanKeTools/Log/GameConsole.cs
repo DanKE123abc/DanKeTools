@@ -152,7 +152,7 @@ namespace DanKeTools.Log
 
         private void ExpansionGUIWindow(int windowId)
         {
-            GUI.DragWindow(new Rect(0, 0, 15000, 20));
+            GUI.DragWindow(new Rect(0, 0, 10000, 20));
 
             #region title
 

@@ -59,6 +59,7 @@ using DanKeTools.Pool;
 
 ```c#
 using DanKeTools.Log;
+using Debug = DanKeTools.Log.Debug; //使用新款Debug
 ```
 
 
@@ -112,16 +113,6 @@ using DanKeTools.Thread;
 
 
 ##### 常用工具库
-
-```c#
-using DanKeTools.Utils.Console;
-```
-
-- 转换Json
-
-```c#
-using DanKeTools.Utils.ToJson;
-```
 
 - 字符串加解密
 

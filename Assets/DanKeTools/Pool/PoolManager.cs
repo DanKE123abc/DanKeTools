@@ -67,7 +67,7 @@ namespace DanKeTools.Pool
         {
             PoolDic.Clear();
             poolObj = null;
-            Debug.Log("[缓存池] 缓存池被清空！");
+            //Debug.Log("[缓存池] 缓存池被清空！");
         }
     }
 

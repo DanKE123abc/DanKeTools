@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using DanKeTools.Json.Extensions;
 
 
@@ -12,7 +13,7 @@ namespace DanKeTools.Json
     ///<summary>
     /// Developed on the basis of LitJson
     ///脚本名称： JsonMapper.cs
-    ///修改时间：2023/2/18
+    ///修改时间：2023/2/25
     ///脚本功能：
     ///备注：
     ///</summary>
@@ -985,7 +986,47 @@ namespace DanKeTools.Json
         }
         #endregion
 
+        public static string ListToJson(int[] data)
+        {
+            StringBuilder content = new StringBuilder();
+            content.Append("[");
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (i == data.Length - 1)
+                    content.Append(data[i] + "]");
+                else
+                    content.Append(data[i] + ",");
+            }
 
+            return content.ToString();
+        }
+
+        public static string ListToJson(List<string> list)
+        {
+            StringBuilder content = new StringBuilder();
+            content.Append("[");
+            for (int i = 0; i < list.Count; i++)
+            {
+                content.Append(i + ":" + list[i]);
+            }
+
+            content.Append("]");
+            return content.ToString();
+        }
+
+        public static string DicToJson(Dictionary<string, string> dictionary)
+        {
+            StringBuilder content = new StringBuilder();
+            content.Append("{");
+            foreach (var key in dictionary.Keys)
+            {
+                content.Append(key + ":" + dictionary[key] + ",");
+            }
+
+            content.Append("}");
+            return content.ToString();
+        }
+        
         public static string ToJson(object obj, bool prettyPrint = true)
         {
             lock (static_writer_lock)

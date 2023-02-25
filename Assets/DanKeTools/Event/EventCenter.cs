@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace DanKeTools.Event
     ///脚本功能：事件中心
     ///备注：
     ///</summary>
-
+    
     public interface IEventInfo
     {
     }
@@ -121,7 +122,7 @@ namespace DanKeTools.Event
         public void Clear()
         {
             eventDic.Clear();
-            Debug.Log("[事件中心] 事件中心被清空！");
+            //Debug.Log("[事件中心] 事件中心被清空！");
         }
     }
 

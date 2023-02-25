@@ -5,8 +5,9 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using System.Security.Cryptography;
-using DanKeTools.Utils.Console;
+using DanKeTools.Log;
 using System;
+using Debug = DanKeTools.Log.Debug;
 
 ///<summary>
 ///脚本名称： FindRepeatAssets.cs
