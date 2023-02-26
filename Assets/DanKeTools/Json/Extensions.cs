@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-namespace DanKeTools.Json.Extensions
+namespace DanKeTools.Json
 {
 
     ///<summary>

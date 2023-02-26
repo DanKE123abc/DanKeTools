@@ -1,19 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
-using DanKeTools.Json.Extensions;
+
+using DanKeTools.Json;
 
 namespace DanKeTools.Json
 {
     ///<summary>
-    /// Developed on the basis of LitJson
-    ///脚本名称： UnityTypeBindings.cs
+    ///脚本名称： IJsonWrapper.cs
     ///修改时间：2023/2/18
     ///脚本功能：
     ///备注：
     ///</summary>
-
-
 
 #if UNITY_EDITOR
     [UnityEditor.InitializeOnLoad]
