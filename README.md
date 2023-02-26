@@ -1,4 +1,4 @@
-![](./favicon.png)
+<img src="./favicon.png" width="100" height="100" />
 
 <center><h1>DanKeTools</h1></center>
 
