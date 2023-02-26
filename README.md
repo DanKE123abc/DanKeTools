@@ -1,4 +1,6 @@
-# DanKeTools
+![](./favicon.png)
+
+<center><h1>DanKeTools</h1></center>
 
 ### 小而美、可扩展、插件式、高内聚低耦合的游戏基础开发库
 
