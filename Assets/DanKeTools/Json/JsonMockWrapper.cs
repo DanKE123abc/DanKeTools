@@ -7,7 +7,7 @@ namespace DanKeTools.Json
 {
     ///<summary>
     /// Developed on the basis of LitJson
-    ///脚本名称： IJsonWrapper.cs
+    ///脚本名称： JsonMockWrapper.cs
     ///修改时间：2023/2/18
     ///脚本功能：
     ///备注：

@@ -41,47 +41,47 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\DanKeTools\Json\Extensions.cs" />
-     <Compile Include="Assets\DanKeTools\Json\IJsonWrapper.cs" />
-     <Compile Include="Assets\DanKeTools\Json\JsonData.cs" />
-     <Compile Include="Assets\DanKeTools\Json\JsonException.cs" />
-     <Compile Include="Assets\DanKeTools\Json\JsonMapper.cs" />
-     <Compile Include="Assets\DanKeTools\Json\JsonMockWrapper.cs" />
-     <Compile Include="Assets\DanKeTools\Json\JsonReader.cs" />
-     <Compile Include="Assets\DanKeTools\Json\JsonWriter.cs" />
-     <Compile Include="Assets\DanKeTools\Json\Lexer.cs" />
-     <Compile Include="Assets\DanKeTools\Json\Netstandard15Polyfill.cs" />
-     <Compile Include="Assets\DanKeTools\Json\ParserToken.cs" />
-     <Compile Include="Assets\DanKeTools\Json\UnityTypeBindings.cs" />
      <Compile Include="Assets\DanKeTools\Utils\MD5\MD5.cs" />
      <Compile Include="Assets\DanKeTools\Pool\PoolData.cs" />
+     <Compile Include="Assets\DanKeTools\Json\UnityTypeBindings.cs" />
      <Compile Include="Assets\DanKeTools\Base\DEncoding.cs" />
      <Compile Include="Assets\DanKeTools\Net\OnlineMT.cs" />
      <Compile Include="Assets\DanKeTools\Net\Requests.cs" />
+     <Compile Include="Assets\DanKeTools\Json\JsonReader.cs" />
+     <Compile Include="Assets\DanKeTools\Json\JsonData.cs" />
      <Compile Include="Assets\DanKeTools\Mono\MonoManager.cs" />
      <Compile Include="Assets\DanKeTools\Fsm\Fsm.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Components\DontDestroyObject.cs" />
      <Compile Include="Assets\DanKeTools\Base\Singleton.cs" />
+     <Compile Include="Assets\DanKeTools\Json\Extensions.cs" />
      <Compile Include="Assets\DanKeTools\Log\GameConsole.cs" />
      <Compile Include="Assets\DanKeTools\Thread\ThreadManager.cs" />
      <Compile Include="Assets\DanKeTools\Voice\VoiceManager.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\DanKeTools\Json\JsonMockWrapper.cs" />
+     <Compile Include="Assets\DanKeTools\Log\LogManager.cs" />
      <Compile Include="Assets\DanKeTools\Utils\Components\AutoDestroyObject.cs" />
      <Compile Include="Assets\DanKeTools\Log\LogStyle.cs" />
      <Compile Include="Assets\DanKeTools\Utils\GPS\GPS.cs" />
+     <Compile Include="Assets\DanKeTools\Json\Netstandard15Polyfill.cs" />
      <Compile Include="Assets\DanKeTools\Pool\PoolManager.cs" />
      <Compile Include="Assets\DanKeTools\Scene\SceneManager.cs" />
      <Compile Include="Assets\DanKeTools\Fsm\FsmState.cs" />
      <Compile Include="Assets\DanKeTools\IO\FileManager.cs" />
+     <Compile Include="Assets\DanKeTools\Json\JsonMapper.cs" />
      <Compile Include="Assets\DanKeTools\Mono\MonoController.cs" />
      <Compile Include="Assets\DanKeTools\Utils\StringEncryption\StringEncryption.cs" />
+     <Compile Include="Assets\DanKeTools\Json\IJsonWrapper.cs" />
      <Compile Include="Assets\DanKeTools\Event\EventCenter.cs" />
+     <Compile Include="Assets\DanKeTools\Json\JsonWriter.cs" />
      <Compile Include="Assets\DanKeTools\UI\UIBasePanel.cs" />
+     <Compile Include="Assets\DanKeTools\Json\JsonException.cs" />
      <Compile Include="Assets\DanKeTools\UI\UITriggerManager.cs" />
      <Compile Include="Assets\DanKeTools\Base\MonoSingleton.cs" />
      <Compile Include="Assets\DanKeTools\Thread\ThreadDelegate.cs" />
+     <Compile Include="Assets\DanKeTools\Json\Lexer.cs" />
      <Compile Include="Assets\DanKeTools\IO\InputManager.cs" />
-     <Compile Include="Assets\DanKeTools\Log\LogManager.cs" />
+     <Compile Include="Assets\DanKeTools\Json\ParserToken.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -794,6 +794,8 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>D:\DanKeTools\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+  </ItemGroup>
+  <ItemGroup>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

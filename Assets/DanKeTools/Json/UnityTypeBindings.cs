@@ -7,7 +7,7 @@ using DanKeTools.Json;
 namespace DanKeTools.Json
 {
     ///<summary>
-    ///脚本名称： IJsonWrapper.cs
+    ///脚本名称： UnityTypeBindings.cs
     ///修改时间：2023/2/18
     ///脚本功能：
     ///备注：
