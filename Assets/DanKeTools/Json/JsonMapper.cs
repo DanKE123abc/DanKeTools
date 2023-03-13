@@ -873,6 +873,46 @@ namespace DanKeTools.Json
         }
         #endregion
 
+        public static string ListToJson(int[] data)
+        {
+            StringBuilder content = new StringBuilder();
+            content.Append("[");
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (i == data.Length - 1)
+                    content.Append(data[i] + "]");
+                else
+                    content.Append(data[i] + ",");
+            }
+
+            return content.ToString();
+        }
+
+        public static string ListToJson(List<string> list)
+        {
+            StringBuilder content = new StringBuilder();
+            content.Append("[");
+            for (int i = 0; i < list.Count; i++)
+            {
+                content.Append(i + ":" + list[i]);
+            }
+
+            content.Append("]");
+            return content.ToString();
+        }
+
+        public static string DicToJson(Dictionary<string, string> dictionary)
+        {
+            StringBuilder content = new StringBuilder();
+            content.Append("{");
+            foreach (var key in dictionary.Keys)
+            {
+                content.Append(key + ":" + dictionary[key] + ",");
+            }
+
+            content.Append("}");
+            return content.ToString();
+        }
 
         public static string ToJson (object obj)
         {
