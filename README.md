@@ -50,7 +50,7 @@ Thread —— 子线程管理器
 
 **v2.0.0**
 
-增加了Json处理处理类（基于LitJson）
+增加Json处理类（基于LitJson）
 
 增加Log类（包含游戏内控制台，全新的Debug类）
 
