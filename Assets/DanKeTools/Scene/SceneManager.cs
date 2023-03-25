@@ -9,11 +9,11 @@ using DanKeTools.Event;
 
 namespace DanKeTools.Scene
 {
-    
+
     ///<summary>
     ///脚本名称： SceneManager.cs
-    ///修改时间：2023/1/12
-    ///脚本功能：场景加载管理器
+    ///修改时间：
+    ///脚本功能：
     ///备注：
     ///</summary>
 
@@ -37,8 +37,8 @@ namespace DanKeTools.Scene
         /// <param name="func"></param>
         public void LoadSceneAsyn(string name, UnityAction func = null)
         {
-            MonoManager.instance.StartCoroutine(ReallyLoadSceneAsyn(name,func));
-            
+            MonoManager.instance.StartCoroutine(ReallyLoadSceneAsyn(name, func));
+
         }
 
         private IEnumerator ReallyLoadSceneAsyn(string name, UnityAction func)
@@ -46,14 +46,14 @@ namespace DanKeTools.Scene
             AsyncOperation asyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(name);
             while (!asyncOperation.isDone)
             {
-                EventCenter.instance.EventTrigger("SceneLoading",asyncOperation.progress);
+                EventCenter.instance.EventTrigger("SceneLoading", asyncOperation.progress);
                 yield return asyncOperation.progress;
             }
             func();
         }
-        
-        
-        
+
+
+
     }
 
 }
