@@ -54,9 +54,15 @@ Thread —— 子线程管理器
 
 增加Log类（包含游戏内控制台，全新的Debug类）
 
+增加多线程任务类
+
+FileManager支持读写Json
+
 ToJson合并到Json处理类中
 
 优化的部分函数
+
+修复了一些bug
 
 **v1.3.0**
 
