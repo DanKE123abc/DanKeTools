@@ -50,6 +50,8 @@ Thread —— 子线程管理器
 
 **v2.0.0**
 
+-- 可能是最后一个大版本了，开发的时候没有想好怎么规划，导致项目太混乱了，可以看一下我的新项目：[DewityKit](https://github.com/DanKE123abc/DewityKit) --
+
 增加Json处理类（基于LitJson）
 
 增加Log类（包含游戏内控制台，全新的Debug类）
