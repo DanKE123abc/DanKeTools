@@ -2,7 +2,7 @@
 
 <center><h1>DanKeTools</h1></center>
 
-<center><h4>小而美、可扩展、插件式、高内聚低耦合的游戏基础开发库</h4></center>
+### 自2023.7.21起不再添加新功能，推荐使用[Dewity](https://github.com/DanKE123abc/DewityKit)
 
 ![Language](https://img.shields.io/badge/Language-Csharp-C#) ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow) ![Author](https://img.shields.io/badge/Author-DanKe-blue) ![Unity](https://img.shields.io/badge/Unity-2021.3.0f1-red)
 
